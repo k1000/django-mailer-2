@@ -7,10 +7,8 @@ logger.setLevel(logging.DEBUG)
 
 
 def get_version():
-    if len(VERSION) > 2 and VERSION[3] != "final":
-        return "%s.%s.%s%s" % (VERSION[0], VERSION[1], VERSION[2], VERSION[3])
-    else:
-        return "%s.%s.%s" % (VERSION[0], VERSION[1], VERSION[2])
+
+    return "%s.%s.%s" % (VERSION[0], VERSION[1], VERSION[2])
 
 
 def send_mail(subject, message, from_email, recipient_list,
