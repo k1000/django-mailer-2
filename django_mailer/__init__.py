@@ -7,7 +7,7 @@ logger.setLevel(logging.DEBUG)
 
 
 def get_version():
-    if VERSION[3] != "final":
+    if len(VERSION) > 2 and VERSION[3] != "final":
         return "%s.%s.%s%s" % (VERSION[0], VERSION[1], VERSION[2], VERSION[3])
     else:
         return "%s.%s.%s" % (VERSION[0], VERSION[1], VERSION[2])
